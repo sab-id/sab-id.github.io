@@ -1,11 +1,12 @@
+import '/styles/globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'GitHub Landing Page',
-  description: 'Welcome to our GitHub projects and open-source initiatives',
+  title: 'SAB Tech Tool',
+  description: 'SAB Tech Tool',
 }
 
 export default function RootLayout({
