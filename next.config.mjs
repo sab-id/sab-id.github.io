@@ -1,10 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    ...(process.env.NODE_ENV === 'production' ? {
-        output: 'export',
-        basePath: '/sab-id.github.io',
-        assetPrefix: '/sab-id.github.io/',
-    } : {}),
+    output: 'export',
+    assetPrefix: '/sab-id.github.io/',
+    basePath: '/sab-id.github.io',
     images: {
         unoptimized: true,
     },
