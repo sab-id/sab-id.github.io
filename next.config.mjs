@@ -7,6 +7,19 @@ const nextConfig = {
     images: {
         unoptimized: true,
     },
+    async headers() {
+        return [
+            {
+                source: '/(.*)',
+                headers: [
+                    {
+                        key: 'Permissions-Policy',
+                        value: 'interest-cohort=(), private-state-token-redemption=(), private-state-token-issuance=(), browsing-topics=()'
+                    },
+                ],
+            },
+        ]
+    },
 };
 
 export default nextConfig;
