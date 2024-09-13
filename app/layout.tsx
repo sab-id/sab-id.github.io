@@ -1,8 +1,11 @@
 import '/styles/globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Plus_Jakarta_Sans } from 'next/font/google'
+import { DarkModeProvider } from '../src/components/ui/darkMode'
+import Header from '../src/components/header'
+import Footer from '../src/components/footer'
 
-const inter = Inter({ subsets: ['latin'] })
+const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'SAB Tech Tool',
@@ -16,7 +19,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <DarkModeProvider>
+      <body className={jakarta.className}>
+          <Header />
+          {children}
+          <Footer />
+        </body>
+      </DarkModeProvider>
     </html>
   )
 }
